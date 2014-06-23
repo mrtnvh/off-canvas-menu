@@ -12,7 +12,7 @@
 
  	function hasParentClass( e, classname ) {
 		if(e === document) return false;
-		if( classie.has( e, classname ) ) {
+		if( $(e).hasClass( classname ) ) {
 			return true;
 		}
 		return e.parentNode && hasParentClass( e.parentNode, classname );
@@ -26,13 +26,13 @@
 
 	function init() {
 
-		var container = document.getElementById( 'st-container' ),
-	            	reset = document.getElementById( 'closeMenu' ),
+		var container = $( '.st-container' ),
+	        reset = $( '.closeMenu' ),
 			buttons = Array.prototype.slice.call( document.querySelectorAll( '#st-trigger-effects > button' ) ),
 			// event type (if mobile use touch events)
 			eventtype = mobilecheck() ? 'touchstart' : 'click',
 			resetMenu = function() {
-				classie.remove( container, 'st-menu-open' );
+				container.removeClass('st-menu-open' );
 			},
 			bodyClickFn = function(evt) {
 				if( !hasParentClass( evt.target, 'st-menu' ) ) {
@@ -54,9 +54,9 @@
 				ev.stopPropagation();
 				ev.preventDefault();
 				container.className = 'st-container'; // clear
-				classie.add( container, effect );
+				container.addClass( effect );
 				setTimeout( function() {
-					classie.add( container, 'st-menu-open' );
+					container.addClass('st-menu-open' );
 				}, 25 );
 				document.addEventListener( eventtype, bodyClickFn );
 				document.addEventListener( eventtype, resetClickFn );

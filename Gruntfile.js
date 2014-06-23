@@ -34,7 +34,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true, // Enable dynamic expansion.
                     cwd: '<%= src %>js/', // Src matches are relative to this path.
-                    src: ['*.js', '!*.min.js'], // Actual pattern(s) to match.
+                    src: ['*.js', '!*.min.js', '!sidebarEffects.js'], // Actual pattern(s) to match.
                     dest: '<%= dest %>js/', // Destination path prefix.
                     ext: '.min.js', // Dest filepaths will have this extension.
                 }]
