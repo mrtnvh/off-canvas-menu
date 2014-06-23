@@ -1,10 +1,5 @@
-
-Sidebar Transitions
+off-canvas-menu
 =========
-Some inspiration for transition effects for off-canvas navigations.
+Bunch of off-canvas menus with sweet transition effects.
 
-[article on Codrops](http://tympanus.net/codrops/?p=16292)
-
-[demo](http://tympanus.net/Development/SidebarTransitions/)
-
-[LICENSING & TERMS OF USE](http://tympanus.net/codrops/licensing/)
+Inspired by [this Codrops article](https://github.com/codrops/SidebarTransitions)
