@@ -16,7 +16,7 @@
     },
     "licenses": [{
         "type": "MIT",
-        "url": "https://github.com/vanhoofmaarten/off-canvas-menu/blob/master/LICENSE"
+        "url": "https://github.com/vanhoofmaarten/off-canvas-menu/blob/master/LICENSE.md"
     }],
     "engines": {
         "node": ">= 0.10.25"
