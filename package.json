@@ -1,7 +1,7 @@
 {
     "name": "off-canvas-menu",
     "description": "Bunch of off-canvas menus with sweet transition effects.",
-    "version": "0.1.0-beta",
+    "version": "0.1.0-pre-alpha",
     "author": {
         "name": "Maarten Van Hoof @vanhoofmaarten",
         "email": "maarten@maartenvanhoof.be",

@@ -1,9 +1,23 @@
 {
-	"name": "off-canvas-menu",
-	"description": "Bunch of off-canvas menus with sweet transition effects.",
-	"version": "0.1.0-beta",
-	"dependencies": {
-		"jquery-legacy": "jquery#1.11.1",
-		"modernizr": "2.8.2"
-	}
+    "name": "off-canvas-menu",
+    "description": "Bunch of off-canvas menus with sweet transition effects.",
+    "version": "0.1.0-pre-alpha",
+    "dependencies": {
+        "jquery-legacy": "jquery#1.11.1"
+    },
+    "ignore": [
+        ".*",
+        "examples",
+        "bower_components",
+        "node_modules"
+    ],
+    "keywords": [
+        "off-canvas",
+        "menu",
+        "navigation",
+        "CSS",
+        "SCSS",
+        "Javascript",
+        "Sass"
+    ]
 }
