@@ -1,0 +1,20 @@
+/* =======================================================
+    Effect: Reveal
+======================================================= */
+
+.st-effect-2.st-menu-open .st-pusher {
+    transform: translate3d(300px, 0, 0);
+}
+
+.st-effect-2.st-menu {
+    z-index: 1;
+}
+
+.st-effect-2.st-menu-open .st-effect-2.st-menu {
+    visibility: visible;
+    transition: transform 0.5s;
+}
+
+.st-effect-2.st-menu::after {
+    display: none;
+}

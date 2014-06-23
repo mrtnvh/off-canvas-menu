@@ -1,0 +1,24 @@
+/* =======================================================
+    Effect: Scale up
+======================================================= */
+
+.st-effect-10.st-container {
+    perspective: 1500px;
+    perspective-origin: 0% 50%;
+}
+
+.st-effect-10.st-menu-open .st-pusher {
+    transform: translate3d(300px, 0, 0);
+}
+
+.st-effect-10.st-menu {
+    z-index: 1;
+    opacity: 1;
+    transform: translate3d(0, 0, -300px);
+}
+
+.st-effect-10.st-menu-open .st-effect-10.st-menu {
+    visibility: visible;
+    transition: transform 0.5s;
+    transform: translate3d(0, 0, 0);
+}

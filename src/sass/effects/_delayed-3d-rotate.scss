@@ -1,0 +1,30 @@
+/* =======================================================
+    Effect: Delayed 3D rotate
+======================================================= */
+
+.st-effect-14.st-container {
+    perspective: 1500px;
+    perspective-origin: 0% 50%;
+}
+
+.st-effect-14 .st-pusher {
+    transform-style: preserve-3d;
+}
+
+.st-effect-14.st-menu-open .st-pusher {
+    transform: translate3d(300px, 0, 0);
+}
+
+.st-effect-14.st-menu {
+    transform: translate3d(-100%, 0, 0) rotateY(90deg);
+    transform-origin: 0% 50%;
+    transform-style: preserve-3d;
+}
+
+.st-effect-14.st-menu-open .st-effect-14.st-menu {
+    visibility: visible;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+    transition-property: transform;
+    transform: translate3d(-100%, 0, 0) rotateY(0deg);
+}

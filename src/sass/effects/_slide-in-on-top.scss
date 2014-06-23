@@ -1,0 +1,17 @@
+/* =======================================================
+    Effect: Slide in on top
+======================================================= */
+
+.st-effect-1.st-menu {
+    visibility: visible;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.st-effect-1.st-menu-open .st-effect-1.st-menu {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}
+
+.st-effect-1.st-menu::after {
+    display: none;
+}
