@@ -106,7 +106,8 @@ module.exports = function(grunt) {
                 },
                 src: [
                     '<%= src %>js/*.js',
-                    '!<%= src %>js/**/*.min.js'
+                    '!<%= src %>js/**/*.min.js',
+                    '!<%= src %>js/sidebarEffects.js'
                 ]
             }
         },
