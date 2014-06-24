@@ -14,11 +14,24 @@
     @import "_variables.scss";
 
 /* Base */
-    @import "base/base.scss";
+    #{$OffCanvasMenu-class--style}{
+        width: $OffCanvasMenu-width;
+    }
+
+    .OffCanvasMenu-overlay{
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.5s;
+
+        .js-offCanvasMenu--active & {
+            opacity: 1;
+            z-index: 97;
+        }
+    }
+
+
 
 /* Components */
-    @import "components/pusher.scss";
-    @import "components/menu.scss";
     @import "components/fallback.scss";
 
 /* Effects */

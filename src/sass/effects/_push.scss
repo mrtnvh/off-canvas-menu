@@ -1,20 +1,30 @@
 /* =======================================================
     Effect: Push
 ======================================================= */
+#{$OffCanvasMenu-effect-selector}--push {
 
-.st-effect-3.st-menu-open .st-pusher {
-    transform: translate3d(300px, 0, 0);
+    #{$OffCanvasMenu-elementsToPush},
+    #{$OffCanvasMenu-class--style} {
+        transition: transform 0.5s, visibility 0.5s;
+    }
+
+    #{$OffCanvasMenu-elementsToPush} {
+        transform: translate3d(0, 0, 0);
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
 
-.st-effect-3.st-menu {
-    transform: translate3d(-100%, 0, 0);
-}
+#{$OffCanvasMenu-effect-selector}--push.js-offCanvasMenu--active {
 
-.st-effect-3.st-menu-open .st-effect-3.st-menu {
-    visibility: visible;
-    transition: transform 0.5s;
-}
+    #{$OffCanvasMenu-elementsToPush} {
+        transform: translate3d($OffCanvasMenu-width, 0, 0);
+    }
 
-.st-effect-3.st-menu::after {
-    display: none;
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
 }
