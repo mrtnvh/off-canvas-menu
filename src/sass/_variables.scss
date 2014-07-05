@@ -2,6 +2,11 @@ $OffCanvasMenu-class--script: ".js-offCanvasMenu";
 $OffCanvasMenu-class--style: ".OffCanvasMenu";
 $OffCanvasMenu-class--overlay: ".OffCanvasMenu-overlay";
 
+$OffCanvasMenu-body: ".App";
+$OffCanvasMenu-container: ".App-content";
+$OffCanvasMenu-container-inner: ".App-content-inner";
+$OffCanvasMenu-elementsToPush-misc: ".OffCanvasMenu-button";
+
 $OffCanvasMenu-elementsToPush: ".App-content, .OffCanvasMenu-button";
 $OffCanvasMenu-effect-selector: ".js-offCanvasMenu--effect";
 

@@ -2,32 +2,42 @@
     Effect: Rotate pusher
 ======================================================= */
 
-.st-effect-6.st-container {
-    perspective: 1500px;
+#{$OffCanvasMenu-effect-selector}--rotate-pusher {
+
+    #{$OffCanvasMenu-container}{
+        perspective: 1500px;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc},
+    #{$OffCanvasMenu-class--style} {
+        transition: transform 0.5s, visibility 0.5s;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc} {
+        transform-origin: 0% 50%;
+        transform-style: preserve-3d;
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        transform: translate3d(-100%, 0, 0) rotateY(15deg);
+        transform-origin: 100% 50%;
+        transform-style: preserve-3d;
+    }
 }
 
-.st-effect-6 .st-pusher {
-    transform-origin: 0% 50%;
-    transform-style: preserve-3d;
+#{$OffCanvasMenu-effect-selector}--rotate-pusher.js-offCanvasMenu--active {
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc} {
+        transform: translate3d($OffCanvasMenu-width, 0, 0) rotateY(-15deg);
+        pointer-events: none;
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+        transform: translate3d(0, 0, 0) rotateY(0);
+    }
 }
 
-.st-effect-6.st-menu-open .st-pusher {
-    transform: translate3d(300px, 0, 0) rotateY(-15deg);
-    pointer-events: none;
-}
-
-.st-effect-6.st-menu {
-    transform: translate3d(-100%, 0, 0);
-    transform-origin: 100% 50%;
-    transform-style: preserve-3d;
-}
-
-.st-effect-6.st-menu-open .st-effect-6.st-menu {
-    visibility: visible;
-    transition: transform 0.5s;
-    transform: translate3d(-100%, 0, 0) rotateY(15deg);
-}
-
-.st-effect-6.st-menu::after {
-    display: none;
-}

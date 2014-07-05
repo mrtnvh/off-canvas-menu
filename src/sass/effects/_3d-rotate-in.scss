@@ -2,27 +2,40 @@
     Effect: 3D rotate in
 ======================================================= */
 
-.st-effect-7.st-container {
-    perspective: 1500px;
-    perspective-origin: 0% 50%;
+#{$OffCanvasMenu-effect-selector}--\33 d-rotate-in { // \33 is Unicode for the number 3
+
+    #{$OffCanvasMenu-body}{
+        perspective: 1500px;
+        perspective-origin: 0% 50%;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc},
+    #{$OffCanvasMenu-class--style} {
+        transition: transform 0.5s, visibility 0.5s;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc} {
+        transform-style: preserve-3d;
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+        transform-origin: 100% 50%;
+        transform-style: preserve-3d;
+    }
 }
 
-.st-effect-7 .st-pusher {
-    transform-style: preserve-3d;
-}
+#{$OffCanvasMenu-effect-selector}--\33 d-rotate-in.js-offCanvasMenu--active {
 
-.st-effect-7.st-menu-open .st-pusher {
-    transform: translate3d(300px, 0, 0);
-}
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc} {
+        transform: translate3d($OffCanvasMenu-width, 0, 0);
+    }
 
-.st-effect-7.st-menu {
-    transform: translate3d(-100%, 0, 0) rotateY(-90deg);
-    transform-origin: 100% 50%;
-    transform-style: preserve-3d;
-}
-
-.st-effect-7.st-menu-open .st-effect-7.st-menu {
-    visibility: visible;
-    transition: transform 0.5s;
-    transform: translate3d(-100%, 0, 0) rotateY(0deg);
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+        transform: translate3d(0, 0, 0) rotateY(0);
+    }
 }

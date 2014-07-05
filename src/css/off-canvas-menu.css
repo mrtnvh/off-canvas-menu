@@ -37,22 +37,19 @@
 /* =======================================================
     Effect: 3D rotate in
 ======================================================= */
-.st-effect-7.st-container {
+.js-offCanvasMenu--effect--\33 d-rotate-in .App {
   -webkit-perspective: 1500px;
   perspective: 1500px;
   -webkit-perspective-origin: 0% 50%;
   perspective-origin: 0% 50%; }
-
-.st-effect-7 .st-pusher {
+.js-offCanvasMenu--effect--\33 d-rotate-in .App-content-inner, .js-offCanvasMenu--effect--\33 d-rotate-in .OffCanvasMenu-button, .js-offCanvasMenu--effect--\33 d-rotate-in .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--\33 d-rotate-in .App-content-inner, .js-offCanvasMenu--effect--\33 d-rotate-in .OffCanvasMenu-button {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
-
-.st-effect-7.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  -o-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
-
-.st-effect-7.st-menu {
+.js-offCanvasMenu--effect--\33 d-rotate-in .OffCanvasMenu {
   -webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
   -o-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
   transform: translate3d(-100%, 0, 0) rotateY(-90deg);
@@ -63,14 +60,15 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-.st-effect-7.st-menu-open .st-effect-7.st-menu {
+.js-offCanvasMenu--effect--\33 d-rotate-in.js-offCanvasMenu--active .App-content-inner, .js-offCanvasMenu--effect--\33 d-rotate-in.js-offCanvasMenu--active .OffCanvasMenu-button {
+  -webkit-transform: translate3d(15em, 0, 0);
+  -o-transform: translate3d(15em, 0, 0);
+  transform: translate3d(15em, 0, 0); }
+.js-offCanvasMenu--effect--\33 d-rotate-in.js-offCanvasMenu--active .OffCanvasMenu {
   visibility: visible;
-  -webkit-transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-  -o-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-  transform: translate3d(-100%, 0, 0) rotateY(0deg); }
+  -webkit-transform: translate3d(0, 0, 0) rotateY(0);
+  -o-transform: translate3d(0, 0, 0) rotateY(0);
+  transform: translate3d(0, 0, 0) rotateY(0); }
 
 /* =======================================================
     Effect: 3D rotate out
@@ -285,22 +283,32 @@
 /* =======================================================
     Effect: Reverse slide out
 ======================================================= */
-.st-effect-5.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  -o-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
-
-.st-effect-5.st-menu {
-  z-index: 1;
+.js-offCanvasMenu--effect--reverse-slide-out .App-content, .js-offCanvasMenu--effect--reverse-slide-out .OffCanvasMenu-button, .js-offCanvasMenu--effect--reverse-slide-out .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--reverse-slide-out .OffCanvasMenu-overlay {
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -o-transition: -o-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s; }
+.js-offCanvasMenu--effect--reverse-slide-out .App-content, .js-offCanvasMenu--effect--reverse-slide-out .OffCanvasMenu-button {
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  z-index: 1; }
+.js-offCanvasMenu--effect--reverse-slide-out .OffCanvasMenu {
   -webkit-transform: translate3d(50%, 0, 0);
   -o-transform: translate3d(50%, 0, 0);
-  transform: translate3d(50%, 0, 0); }
+  transform: translate3d(50%, 0, 0);
+  z-index: 0; }
 
-.st-effect-5.st-menu-open .st-effect-5.st-menu {
+.js-offCanvasMenu--effect--reverse-slide-out.js-offCanvasMenu--active .App-content, .js-offCanvasMenu--effect--reverse-slide-out.js-offCanvasMenu--active .OffCanvasMenu-button, .js-offCanvasMenu--effect--reverse-slide-out.js-offCanvasMenu--active .OffCanvasMenu-overlay {
+  -webkit-transform: translate3d(15em, 0, 0);
+  -o-transform: translate3d(15em, 0, 0);
+  transform: translate3d(15em, 0, 0); }
+.js-offCanvasMenu--effect--reverse-slide-out.js-offCanvasMenu--active .OffCanvasMenu {
   visibility: visible;
-  -webkit-transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  transition: transform 0.5s;
   -webkit-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
@@ -308,28 +316,24 @@
 /* =======================================================
     Effect: Rotate pusher
 ======================================================= */
-.st-effect-6.st-container {
+.js-offCanvasMenu--effect--rotate-pusher .App-content {
   -webkit-perspective: 1500px;
   perspective: 1500px; }
-
-.st-effect-6 .st-pusher {
+.js-offCanvasMenu--effect--rotate-pusher .App-content-inner, .js-offCanvasMenu--effect--rotate-pusher .OffCanvasMenu-button, .js-offCanvasMenu--effect--rotate-pusher .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--rotate-pusher .App-content-inner, .js-offCanvasMenu--effect--rotate-pusher .OffCanvasMenu-button {
   -webkit-transform-origin: 0% 50%;
   -ms-transform-origin: 0% 50%;
   -o-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
-
-.st-effect-6.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(300px, 0, 0) rotateY(-15deg);
-  -o-transform: translate3d(300px, 0, 0) rotateY(-15deg);
-  transform: translate3d(300px, 0, 0) rotateY(-15deg);
-  pointer-events: none; }
-
-.st-effect-6.st-menu {
-  -webkit-transform: translate3d(-100%, 0, 0);
-  -o-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
+.js-offCanvasMenu--effect--rotate-pusher .OffCanvasMenu {
+  -webkit-transform: translate3d(-100%, 0, 0) rotateY(15deg);
+  -o-transform: translate3d(-100%, 0, 0) rotateY(15deg);
+  transform: translate3d(-100%, 0, 0) rotateY(15deg);
   -webkit-transform-origin: 100% 50%;
   -ms-transform-origin: 100% 50%;
   -o-transform-origin: 100% 50%;
@@ -337,17 +341,16 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-.st-effect-6.st-menu-open .st-effect-6.st-menu {
+.js-offCanvasMenu--effect--rotate-pusher.js-offCanvasMenu--active .App-content-inner, .js-offCanvasMenu--effect--rotate-pusher.js-offCanvasMenu--active .OffCanvasMenu-button {
+  -webkit-transform: translate3d(15em, 0, 0) rotateY(-15deg);
+  -o-transform: translate3d(15em, 0, 0) rotateY(-15deg);
+  transform: translate3d(15em, 0, 0) rotateY(-15deg);
+  pointer-events: none; }
+.js-offCanvasMenu--effect--rotate-pusher.js-offCanvasMenu--active .OffCanvasMenu {
   visibility: visible;
-  -webkit-transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(15deg);
-  -o-transform: translate3d(-100%, 0, 0) rotateY(15deg);
-  transform: translate3d(-100%, 0, 0) rotateY(15deg); }
-
-.st-effect-6.st-menu::after {
-  display: none; }
+  -webkit-transform: translate3d(0, 0, 0) rotateY(0);
+  -o-transform: translate3d(0, 0, 0) rotateY(0);
+  transform: translate3d(0, 0, 0) rotateY(0); }
 
 /* =======================================================
     Effect: Scale & rotate pusher
