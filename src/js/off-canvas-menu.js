@@ -43,10 +43,44 @@
 
         toggle = function(elem, effect) {
 
-            var buttonSettings = {
-                icon : elem.find(".Icon"),
-                message : elem.find(".js-offCanvasMenu-button-text")
-            };
+            var time,
+                buttonSettings = {
+                        icon : elements.button.find(".Icon"),
+                        message : elements.button.find(".js-offCanvasMenu-button-text")
+                    },
+                checkIdenticalEffects = function(){
+                        var elementEffect = elem.data("effect"),
+                            containerEffect = elements.container.data("effect");
+
+                        if (containerEffect === elementEffect) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                toggleClasses = function(){
+                    if (settings.container.hasClass(htmlClasses.containerActive)) {
+                        //elem.removeClass(htmlClasses.activeCssClass);
+                        elements.container.removeClass(htmlClasses.containerActive);
+                        buttonSettings.icon.removeClass(settings.iconClose).addClass(settings.iconOpen);
+                        buttonSettings.message.text("Menu");
+                    } else {
+                        //elem.addClass(htmlClasses.activeCssClass);
+                        elements.container.addClass(htmlClasses.containerActive);
+                        buttonSettings.icon.removeClass(settings.iconOpen).addClass(settings.iconClose);
+                        buttonSettings.message.text("Sluit");
+                    }
+                };
+
+            if (checkIdenticalEffects()) {
+                time = 0;
+            } else {
+                time = 400;
+            }
+
+            setTimeout( function(time){
+                toggleClasses();
+            }, time);
 
             //Update effect data and class
             elements.container.removeClass(function () {
@@ -55,19 +89,6 @@
 
             elements.container.addClass(settings.globalName + "--effect--" + checkEffect(elem));
             elements.container.data("effect", checkEffect(elem));
-
-
-            if (settings.container.hasClass(htmlClasses.containerActive)) {
-                //elem.removeClass(htmlClasses.activeCssClass);
-                elements.container.removeClass(htmlClasses.containerActive);
-                buttonSettings.icon.removeClass(settings.iconClose).addClass(settings.iconOpen);
-                buttonSettings.message.text("Menu");
-            } else {
-                //elem.addClass(htmlClasses.activeCssClass);
-                elements.container.addClass(htmlClasses.containerActive);
-                buttonSettings.icon.removeClass(settings.iconOpen).addClass(settings.iconClose);
-                buttonSettings.message.text("Sluit");
-            }
         },
 
         checkEffect = function(elem) {
@@ -89,10 +110,13 @@
         });
 
         //Refactor for use of overlay
-        // elements.overlay.click(function(e) {
-        //     e.preventDefault();
-        //     toggle( elements.button, checkEffect(settings.container) );
-        // });
+        elements.overlay.click(function(e) {
+            e.preventDefault();
+            $(this).data("effect", checkEffect(settings.container));
+            toggle( $(this), checkEffect(settings.container) );
+        });
+
+
 
         // On load
         // Provide the correct effect class to the container.
