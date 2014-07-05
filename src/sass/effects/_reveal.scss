@@ -2,19 +2,32 @@
     Effect: Reveal
 ======================================================= */
 
-.st-effect-2.st-menu-open .st-pusher {
-    transform: translate3d(300px, 0, 0);
+#{$OffCanvasMenu-effect-selector}--reveal {
+
+    #{$OffCanvasMenu-elementsToPush},
+    #{$OffCanvasMenu-class--style},
+    #{$OffCanvasMenu-class--overlay}{
+        transition: transform 0.5s, visibility 0.5s;
+    }
+
+    #{$OffCanvasMenu-elementsToPush} {
+        transform: translate3d(0, 0, 0);
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        z-index: -1;
+    }
 }
 
-.st-effect-2.st-menu {
-    z-index: 1;
+#{$OffCanvasMenu-effect-selector}--reveal.js-offCanvasMenu--active {
+
+    #{$OffCanvasMenu-elementsToPush},
+    #{$OffCanvasMenu-class--overlay} {
+        transform: translate3d($OffCanvasMenu-width, 0, 0);
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+    }
 }
 
-.st-effect-2.st-menu-open .st-effect-2.st-menu {
-    visibility: visible;
-    transition: transform 0.5s;
-}
-
-.st-effect-2.st-menu::after {
-    display: none;
-}
