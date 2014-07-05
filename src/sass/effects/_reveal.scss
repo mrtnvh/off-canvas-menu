@@ -5,17 +5,22 @@
 #{$OffCanvasMenu-effect-selector}--reveal {
 
     #{$OffCanvasMenu-elementsToPush},
-    #{$OffCanvasMenu-class--style},
-    #{$OffCanvasMenu-class--overlay}{
+    #{$OffCanvasMenu-class--style}{
         transition: transform 0.5s, visibility 0.5s;
+    }
+
+    #{$OffCanvasMenu-class--overlay}{
+        transition: transform 0.5s, opacity 0.5s;
     }
 
     #{$OffCanvasMenu-elementsToPush} {
         transform: translate3d(0, 0, 0);
+        position: relative;
+        z-index: 1;
     }
 
     #{$OffCanvasMenu-class--style} {
-        z-index: -1;
+        z-index: 0;
     }
 }
 

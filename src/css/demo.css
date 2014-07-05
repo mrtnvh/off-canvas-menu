@@ -64,7 +64,7 @@
 /* -------------------------------------*/
 
     .OffCanvasMenu-button{
-        position: fixed;
+        position: fixed !important;
         top: 1em;
         left: 1em;
         background: #333;

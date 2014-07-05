@@ -2,21 +2,39 @@
     Effect: Slide along
 ======================================================= */
 
-.st-effect-4.st-menu-open .st-pusher {
-    transform: translate3d(300px, 0, 0);
+#{$OffCanvasMenu-effect-selector}--slide-along {
+
+    #{$OffCanvasMenu-elementsToPush},
+    #{$OffCanvasMenu-class--style} {
+        transition: transform 0.5s, visibility 0.5s;
+    }
+
+    #{$OffCanvasMenu-class--overlay}{
+        transition: transform 0.5s, opacity 0.5s;
+    }
+
+    #{$OffCanvasMenu-elementsToPush} {
+        transform: translate3d(0, 0, 0);
+        position: relative;
+        z-index: 1;
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        transform: translate3d(-50%, 0, 0);
+        z-index: 0;
+    }
 }
 
-.st-effect-4.st-menu {
-    z-index: 1;
-    transform: translate3d(-50%, 0, 0);
+#{$OffCanvasMenu-effect-selector}--slide-along.js-offCanvasMenu--active {
+
+    #{$OffCanvasMenu-elementsToPush},
+    #{$OffCanvasMenu-class--overlay} {
+        transform: translate3d($OffCanvasMenu-width, 0, 0);
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
-.st-effect-4.st-menu-open .st-effect-4.st-menu {
-    visibility: visible;
-    transition: transform 0.5s;
-    transform: translate3d(0, 0, 0);
-}
-
-.st-effect-4.st-menu::after {
-    display: none;
-}

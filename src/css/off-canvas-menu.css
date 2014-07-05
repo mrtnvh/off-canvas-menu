@@ -258,16 +258,22 @@
 /* =======================================================
     Effect: Reveal
 ======================================================= */
-.js-offCanvasMenu--effect--reveal .App-content, .js-offCanvasMenu--effect--reveal .OffCanvasMenu-button, .js-offCanvasMenu--effect--reveal .OffCanvasMenu, .js-offCanvasMenu--effect--reveal .OffCanvasMenu-overlay {
+.js-offCanvasMenu--effect--reveal .App-content, .js-offCanvasMenu--effect--reveal .OffCanvasMenu-button, .js-offCanvasMenu--effect--reveal .OffCanvasMenu {
   -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
   -o-transition: -o-transform 0.5s, visibility 0.5s;
   transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--reveal .OffCanvasMenu-overlay {
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -o-transition: -o-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s; }
 .js-offCanvasMenu--effect--reveal .App-content, .js-offCanvasMenu--effect--reveal .OffCanvasMenu-button {
   -webkit-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  z-index: 1; }
 .js-offCanvasMenu--effect--reveal .OffCanvasMenu {
-  z-index: -1; }
+  z-index: 0; }
 
 .js-offCanvasMenu--effect--reveal.js-offCanvasMenu--active .App-content, .js-offCanvasMenu--effect--reveal.js-offCanvasMenu--active .OffCanvasMenu-button, .js-offCanvasMenu--effect--reveal.js-offCanvasMenu--active .OffCanvasMenu-overlay {
   -webkit-transform: translate3d(15em, 0, 0);
@@ -444,28 +450,35 @@
 /* =======================================================
     Effect: Slide along
 ======================================================= */
-.st-effect-4.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  -o-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
-
-.st-effect-4.st-menu {
-  z-index: 1;
+.js-offCanvasMenu--effect--slide-along .App-content, .js-offCanvasMenu--effect--slide-along .OffCanvasMenu-button, .js-offCanvasMenu--effect--slide-along .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--slide-along .OffCanvasMenu-overlay {
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  -o-transition: -o-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s; }
+.js-offCanvasMenu--effect--slide-along .App-content, .js-offCanvasMenu--effect--slide-along .OffCanvasMenu-button {
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  z-index: 1; }
+.js-offCanvasMenu--effect--slide-along .OffCanvasMenu {
   -webkit-transform: translate3d(-50%, 0, 0);
   -o-transform: translate3d(-50%, 0, 0);
-  transform: translate3d(-50%, 0, 0); }
+  transform: translate3d(-50%, 0, 0);
+  z-index: 0; }
 
-.st-effect-4.st-menu-open .st-effect-4.st-menu {
+.js-offCanvasMenu--effect--slide-along.js-offCanvasMenu--active .App-content, .js-offCanvasMenu--effect--slide-along.js-offCanvasMenu--active .OffCanvasMenu-button, .js-offCanvasMenu--effect--slide-along.js-offCanvasMenu--active .OffCanvasMenu-overlay {
+  -webkit-transform: translate3d(15em, 0, 0);
+  -o-transform: translate3d(15em, 0, 0);
+  transform: translate3d(15em, 0, 0); }
+.js-offCanvasMenu--effect--slide-along.js-offCanvasMenu--active .OffCanvasMenu {
   visibility: visible;
-  -webkit-transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  transition: transform 0.5s;
   -webkit-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
-
-.st-effect-4.st-menu::after {
-  display: none; }
 
 /* =======================================================
     Effect: Slide in on top
