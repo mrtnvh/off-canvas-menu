@@ -162,9 +162,28 @@ module.exports = function(grunt) {
 
 
 
+        /*  Start a server
+            ========================================================================== */
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    //base: '',
+                    keepalive: true,
+                    livereload: true
+                }
+            }
+        },
+
+
+
         /*  Automate tasks
             ========================================================================== */
         watch: {
+            options: {
+                livereload: true,
+                port: 9001,
+            },
 
             gruntfile: {
                 files: ['<%= jshint.gruntfile.src %>'],
