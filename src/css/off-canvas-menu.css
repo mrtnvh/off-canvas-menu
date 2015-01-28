@@ -73,22 +73,19 @@
 /* =======================================================
     Effect: 3D rotate out
 ======================================================= */
-.st-effect-8.st-container {
+.js-offCanvasMenu--effect--\33 d-rotate-out .App {
   -webkit-perspective: 1500px;
   perspective: 1500px;
   -webkit-perspective-origin: 0% 50%;
   perspective-origin: 0% 50%; }
-
-.st-effect-8 .st-pusher {
+.js-offCanvasMenu--effect--\33 d-rotate-out .App-content-inner, .js-offCanvasMenu--effect--\33 d-rotate-out .OffCanvasMenu-button, .js-offCanvasMenu--effect--\33 d-rotate-out .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--\33 d-rotate-out .App-content-inner, .js-offCanvasMenu--effect--\33 d-rotate-out .OffCanvasMenu-button {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
-
-.st-effect-8.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  -o-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
-
-.st-effect-8.st-menu {
+.js-offCanvasMenu--effect--\33 d-rotate-out .OffCanvasMenu {
   -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg);
   -o-transform: translate3d(-100%, 0, 0) rotateY(90deg);
   transform: translate3d(-100%, 0, 0) rotateY(90deg);
@@ -99,17 +96,15 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
 
-.st-effect-8.st-menu-open .st-effect-8.st-menu {
+.js-offCanvasMenu--effect--\33 d-rotate-out.js-offCanvasMenu--active .App-content-inner, .js-offCanvasMenu--effect--\33 d-rotate-out.js-offCanvasMenu--active .OffCanvasMenu-button {
+  -webkit-transform: translate3d(15em, 0, 0);
+  -o-transform: translate3d(15em, 0, 0);
+  transform: translate3d(15em, 0, 0); }
+.js-offCanvasMenu--effect--\33 d-rotate-out.js-offCanvasMenu--active .OffCanvasMenu {
   visibility: visible;
-  -webkit-transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-  -o-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-  transform: translate3d(-100%, 0, 0) rotateY(0deg); }
-
-.st-effect-8.st-menu::after {
-  display: none; }
+  -webkit-transform: translate3d(0, 0, 0) rotateY(0);
+  -o-transform: translate3d(0, 0, 0) rotateY(0);
+  transform: translate3d(0, 0, 0) rotateY(0); }
 
 /* =======================================================
     Effect: Delayed 3D rotate
@@ -256,6 +251,9 @@
 /* =======================================================
     Effect: Reveal
 ======================================================= */
+/*
+ * There's a bug with scrolling the offcanvasmenu, look in to it!
+ */
 .js-offCanvasMenu--effect--reveal .App-content, .js-offCanvasMenu--effect--reveal .OffCanvasMenu-button, .js-offCanvasMenu--effect--reveal .OffCanvasMenu {
   -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
   -o-transition: -o-transform 0.5s, visibility 0.5s;
