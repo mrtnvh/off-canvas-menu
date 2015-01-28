@@ -109,80 +109,89 @@
 /* =======================================================
     Effect: Delayed 3D rotate
 ======================================================= */
-.st-effect-14.st-container {
+.js-offCanvasMenu--effect--delayed-\33 d-rotate .App {
   -webkit-perspective: 1500px;
   perspective: 1500px;
   -webkit-perspective-origin: 0% 50%;
   perspective-origin: 0% 50%; }
-
-.st-effect-14 .st-pusher {
+.js-offCanvasMenu--effect--delayed-\33 d-rotate .App-content-inner, .js-offCanvasMenu--effect--delayed-\33 d-rotate .OffCanvasMenu-button, .js-offCanvasMenu--effect--delayed-\33 d-rotate .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--delayed-\33 d-rotate .App-content-inner, .js-offCanvasMenu--effect--delayed-\33 d-rotate .OffCanvasMenu-button {
+  -webkit-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  transition-delay: 0.1s; }
+.js-offCanvasMenu--effect--delayed-\33 d-rotate .App-content-inner {
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-.st-effect-14.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  -o-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
-
-.st-effect-14.st-menu {
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg);
-  -o-transform: translate3d(-100%, 0, 0) rotateY(90deg);
-  transform: translate3d(-100%, 0, 0) rotateY(90deg);
+  transform-style: preserve-3d;
+  z-index: 2; }
+.js-offCanvasMenu--effect--delayed-\33 d-rotate .OffCanvasMenu {
+  z-index: 1;
+  -webkit-transform: translate3d(-50%, 0, 0) rotateY(90deg);
+  -o-transform: translate3d(-50%, 0, 0) rotateY(90deg);
+  transform: translate3d(-50%, 0, 0) rotateY(90deg);
   -webkit-transform-origin: 0% 50%;
   -ms-transform-origin: 0% 50%;
   -o-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-.st-effect-14.st-menu-open .st-effect-14.st-menu {
-  visibility: visible;
+  transform-style: preserve-3d;
   -webkit-transition-delay: 0.1s;
   -o-transition-delay: 0.1s;
   transition-delay: 0.1s;
   -webkit-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-property: -webkit-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-  -o-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-  transform: translate3d(-100%, 0, 0) rotateY(0deg); }
+  transition-timing-function: ease-in-out; }
+
+.js-offCanvasMenu--effect--delayed-\33 d-rotate.js-offCanvasMenu--active .App-content-inner, .js-offCanvasMenu--effect--delayed-\33 d-rotate.js-offCanvasMenu--active .OffCanvasMenu-button {
+  -webkit-transform: translate3d(15em, 0, 0);
+  -o-transform: translate3d(15em, 0, 0);
+  transform: translate3d(15em, 0, 0); }
+.js-offCanvasMenu--effect--delayed-\33 d-rotate.js-offCanvasMenu--active .OffCanvasMenu {
+  visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0) rotateY(0deg);
+  -o-transform: translate3d(0, 0, 0) rotateY(0deg);
+  transform: translate3d(0, 0, 0) rotateY(0deg);
+  -webkit-transition-delay: none;
+  -o-transition-delay: none;
+  transition-delay: none; }
 
 /* =======================================================
     Effect: Fall down
 ======================================================= */
-.st-effect-13.st-container {
+.js-offCanvasMenu--effect--fall-down .App {
   -webkit-perspective: 1500px;
   perspective: 1500px;
   -webkit-perspective-origin: 0% 50%;
   perspective-origin: 0% 50%; }
-
-.st-effect-13.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  -o-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
-
-.st-effect-13.st-menu {
-  z-index: 1;
-  opacity: 1;
-  -webkit-transform: translate3d(0, -100%, 0);
-  -o-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0); }
-
-.st-effect-13.st-menu-open .st-effect-13.st-menu {
-  visibility: visible;
+.js-offCanvasMenu--effect--fall-down .App-content-inner, .js-offCanvasMenu--effect--fall-down .OffCanvasMenu-button, .js-offCanvasMenu--effect--fall-down .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s;
   -webkit-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
   -webkit-transition-property: -webkit-transform;
   -o-transition-property: -o-transform;
-  transition-property: transform;
+  transition-property: transform; }
+.js-offCanvasMenu--effect--fall-down .App-content-inner {
+  z-index: 2; }
+.js-offCanvasMenu--effect--fall-down .OffCanvasMenu {
+  z-index: 1;
+  -webkit-transform: translate3d(0, -100%, 0);
+  -o-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0); }
+
+.js-offCanvasMenu--effect--fall-down.js-offCanvasMenu--active .App-content-inner, .js-offCanvasMenu--effect--fall-down.js-offCanvasMenu--active .OffCanvasMenu-button {
+  -webkit-transform: translate3d(15em, 0, 0);
+  -o-transform: translate3d(15em, 0, 0);
+  transform: translate3d(15em, 0, 0); }
+.js-offCanvasMenu--effect--fall-down.js-offCanvasMenu--active .OffCanvasMenu {
+  visibility: visible;
   -webkit-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  transition-speed: 0.2s; }
+  transform: translate3d(0, 0, 0); }
 
 /* =======================================================
     Effect: Open door
@@ -221,6 +230,50 @@
 
 .st-effect-12.st-menu::after {
   display: none; }
+
+.js-offCanvasMenu--effect--open-door .App-content {
+  -webkit-perspective: 1500px;
+  perspective: 1500px; }
+.js-offCanvasMenu--effect--open-door .App-content-inner, .js-offCanvasMenu--effect--open-door .OffCanvasMenu-button, .js-offCanvasMenu--effect--open-door .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--open-door .App-content-inner {
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+.js-offCanvasMenu--effect--open-door .OffCanvasMenu {
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
+
+.js-offCanvasMenu--effect--open-door.js-offCanvasMenu--active {
+  /*
+     * Make a canvas that goes back and forth
+     * To hold scroll - add scroll position to top of inner and vice versa
+     */ }
+  .js-offCanvasMenu--effect--open-door.js-offCanvasMenu--active .App-content {
+    overflow: hidden;
+    position: relative;
+    height: 100%; }
+  .js-offCanvasMenu--effect--open-door.js-offCanvasMenu--active .App-content-inner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    left: 0px;
+    top: 0px; }
+  .js-offCanvasMenu--effect--open-door.js-offCanvasMenu--active .App-content-inner, .js-offCanvasMenu--effect--open-door.js-offCanvasMenu--active .OffCanvasMenu-button {
+    -webkit-transform: rotateY(-10deg);
+    -o-transform: rotateY(-10deg);
+    transform: rotateY(-10deg); }
+  .js-offCanvasMenu--effect--open-door.js-offCanvasMenu--active .OffCanvasMenu {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
 
 /* =======================================================
     Effect: Push
@@ -353,100 +406,117 @@
 /* =======================================================
     Effect: Scale & rotate pusher
 ======================================================= */
-.st-effect-11.st-container {
+.js-offCanvasMenu--effect--scale-and-rotate-pusher .App-content {
   -webkit-perspective: 1500px;
   perspective: 1500px; }
-
-.st-effect-11 .st-pusher {
+.js-offCanvasMenu--effect--scale-and-rotate-pusher .App-content-inner, .js-offCanvasMenu--effect--scale-and-rotate-pusher .OffCanvasMenu-button, .js-offCanvasMenu--effect--scale-and-rotate-pusher .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--scale-and-rotate-pusher .App-content-inner {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
-
-.st-effect-11.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(100px, 0, -600px) rotateY(-20deg);
-  -o-transform: translate3d(100px, 0, -600px) rotateY(-20deg);
-  transform: translate3d(100px, 0, -600px) rotateY(-20deg); }
-
-.st-effect-11.st-menu {
-  opacity: 1;
+.js-offCanvasMenu--effect--scale-and-rotate-pusher .OffCanvasMenu {
   -webkit-transform: translate3d(-100%, 0, 0);
   -o-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0); }
 
-.st-effect-11.st-menu-open .st-effect-11.st-menu {
-  visibility: visible;
-  -webkit-transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.st-effect-11.st-menu::after {
-  display: none; }
+.js-offCanvasMenu--effect--scale-and-rotate-pusher.js-offCanvasMenu--active {
+  /*
+     * Make a canvas that goes back and forth
+     * To hold scroll - add scroll position to top of inner and vice versa
+     */ }
+  .js-offCanvasMenu--effect--scale-and-rotate-pusher.js-offCanvasMenu--active .App-content {
+    overflow: hidden;
+    position: relative;
+    height: 100%; }
+  .js-offCanvasMenu--effect--scale-and-rotate-pusher.js-offCanvasMenu--active .App-content-inner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    left: 0px;
+    top: 0px; }
+  .js-offCanvasMenu--effect--scale-and-rotate-pusher.js-offCanvasMenu--active .App-content-inner, .js-offCanvasMenu--effect--scale-and-rotate-pusher.js-offCanvasMenu--active .OffCanvasMenu-button {
+    -webkit-transform: translate3d(100px, 0, -30em) rotateY(-20deg);
+    -o-transform: translate3d(100px, 0, -30em) rotateY(-20deg);
+    transform: translate3d(100px, 0, -30em) rotateY(-20deg); }
+  .js-offCanvasMenu--effect--scale-and-rotate-pusher.js-offCanvasMenu--active .OffCanvasMenu {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
 
 /* =======================================================
     Effect: Scale down pusher
 ======================================================= */
-.st-effect-9.st-container {
+.js-offCanvasMenu--effect--scale-down-pusher .App-content {
   -webkit-perspective: 1500px;
   perspective: 1500px; }
-
-.st-effect-9 .st-pusher {
+.js-offCanvasMenu--effect--scale-down-pusher .App-content-inner, .js-offCanvasMenu--effect--scale-down-pusher .OffCanvasMenu-button, .js-offCanvasMenu--effect--scale-down-pusher .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--scale-down-pusher .App-content-inner {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
-
-.st-effect-9.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(0, 0, -300px);
-  -o-transform: translate3d(0, 0, -300px);
-  transform: translate3d(0, 0, -300px); }
-
-.st-effect-9.st-menu {
-  opacity: 1;
+.js-offCanvasMenu--effect--scale-down-pusher .OffCanvasMenu {
   -webkit-transform: translate3d(-100%, 0, 0);
   -o-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0); }
 
-.st-effect-9.st-menu-open .st-effect-9.st-menu {
-  visibility: visible;
-  -webkit-transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.st-effect-9.st-menu::after {
-  display: none; }
+.js-offCanvasMenu--effect--scale-down-pusher.js-offCanvasMenu--active {
+  /*
+     * Make a canvas that goes back and forth
+     */ }
+  .js-offCanvasMenu--effect--scale-down-pusher.js-offCanvasMenu--active .App-content {
+    overflow: hidden;
+    position: relative;
+    height: 100%; }
+  .js-offCanvasMenu--effect--scale-down-pusher.js-offCanvasMenu--active .App-content-inner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    left: 0px;
+    top: 0px; }
+  .js-offCanvasMenu--effect--scale-down-pusher.js-offCanvasMenu--active .App-content-inner, .js-offCanvasMenu--effect--scale-down-pusher.js-offCanvasMenu--active .OffCanvasMenu-button {
+    -webkit-transform: translate3d(0, 0, -15em);
+    -o-transform: translate3d(0, 0, -15em);
+    transform: translate3d(0, 0, -15em); }
+  .js-offCanvasMenu--effect--scale-down-pusher.js-offCanvasMenu--active .OffCanvasMenu {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
 
 /* =======================================================
     Effect: Scale up
 ======================================================= */
-.st-effect-10.st-container {
+.js-offCanvasMenu--effect--scale-up .App {
   -webkit-perspective: 1500px;
   perspective: 1500px;
   -webkit-perspective-origin: 0% 50%;
   perspective-origin: 0% 50%; }
-
-.st-effect-10.st-menu-open .st-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  -o-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
-
-.st-effect-10.st-menu {
+.js-offCanvasMenu--effect--scale-up .App-content-inner, .js-offCanvasMenu--effect--scale-up .OffCanvasMenu-button, .js-offCanvasMenu--effect--scale-up .OffCanvasMenu {
+  -webkit-transition: -webkit-transform 0.5s, visibility 0.5s;
+  -o-transition: -o-transform 0.5s, visibility 0.5s;
+  transition: transform 0.5s, visibility 0.5s; }
+.js-offCanvasMenu--effect--scale-up .App-content-inner, .js-offCanvasMenu--effect--scale-up .OffCanvasMenu-button {
+  z-index: 2; }
+.js-offCanvasMenu--effect--scale-up .OffCanvasMenu {
   z-index: 1;
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, -300px);
-  -o-transform: translate3d(0, 0, -300px);
-  transform: translate3d(0, 0, -300px); }
+  -webkit-transform: translate3d(0, 0, -15em);
+  -o-transform: translate3d(0, 0, -15em);
+  transform: translate3d(0, 0, -15em); }
 
-.st-effect-10.st-menu-open .st-effect-10.st-menu {
+.js-offCanvasMenu--effect--scale-up.js-offCanvasMenu--active .App-content-inner, .js-offCanvasMenu--effect--scale-up.js-offCanvasMenu--active .OffCanvasMenu-button {
+  -webkit-transform: translate3d(15em, 0, 0);
+  -o-transform: translate3d(15em, 0, 0);
+  transform: translate3d(15em, 0, 0); }
+.js-offCanvasMenu--effect--scale-up.js-offCanvasMenu--active .OffCanvasMenu {
   visibility: visible;
-  -webkit-transition: -webkit-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
+  -webkit-transform: translate3d(0, 0, 0) rotateY(0);
+  -o-transform: translate3d(0, 0, 0) rotateY(0);
+  transform: translate3d(0, 0, 0) rotateY(0); }
 
 /* =======================================================
     Effect: Slide along

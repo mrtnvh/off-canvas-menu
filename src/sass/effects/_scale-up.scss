@@ -1,24 +1,39 @@
 /* =======================================================
     Effect: Scale up
 ======================================================= */
+#{$OffCanvasMenu-effect-selector}--scale-up {
 
-.st-effect-10.st-container {
-    perspective: 1500px;
-    perspective-origin: 0% 50%;
+    #{$OffCanvasMenu-body}{
+        perspective: 1500px;
+        perspective-origin: 0% 50%;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc},
+    #{$OffCanvasMenu-class--style} {
+        transition: transform 0.5s, visibility 0.5s;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc}{
+        z-index: 2;
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        z-index: 1;
+        transform: translate3d(0, 0, -($OffCanvasMenu-width));
+    }
 }
 
-.st-effect-10.st-menu-open .st-pusher {
-    transform: translate3d(300px, 0, 0);
-}
+#{$OffCanvasMenu-effect-selector}--scale-up.js-offCanvasMenu--active {
 
-.st-effect-10.st-menu {
-    z-index: 1;
-    opacity: 1;
-    transform: translate3d(0, 0, -300px);
-}
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc} {
+        transform: translate3d($OffCanvasMenu-width, 0, 0);
+    }
 
-.st-effect-10.st-menu-open .st-effect-10.st-menu {
-    visibility: visible;
-    transition: transform 0.5s;
-    transform: translate3d(0, 0, 0);
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+        transform: translate3d(0, 0, 0) rotateY(0);
+    }
 }

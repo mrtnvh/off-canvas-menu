@@ -29,3 +29,58 @@
 .st-effect-12.st-menu::after {
     display: none;
 }
+
+#{$OffCanvasMenu-effect-selector}--open-door {
+
+    #{$OffCanvasMenu-container}{
+        perspective: 1500px;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc},
+    #{$OffCanvasMenu-class--style} {
+        transition: transform 0.5s, visibility 0.5s;
+
+    }
+
+    #{$OffCanvasMenu-container-inner}{
+        transform-origin: 100% 50%;
+        transform-style: preserve-3d;
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+#{$OffCanvasMenu-effect-selector}--open-door.js-offCanvasMenu--active {
+
+    /*
+     * Make a canvas that goes back and forth
+     * To hold scroll - add scroll position to top of inner and vice versa
+     */
+
+    #{$OffCanvasMenu-container}{
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+    }
+
+    #{$OffCanvasMenu-container-inner}{
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        left: 0px;
+        top: 0px;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc} {
+        transform: rotateY(-10deg);
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
+}

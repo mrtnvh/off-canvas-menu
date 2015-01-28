@@ -54,6 +54,10 @@
 /* -------------------------------------*/
 
     .App-content{
+        background: #333;
+    }
+
+    .App-content-inner{
         background: #f3efe0;
     }
 

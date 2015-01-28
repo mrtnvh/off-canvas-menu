@@ -1,30 +1,56 @@
 /* =======================================================
     Effect: Scale & rotate pusher
 ======================================================= */
+#{$OffCanvasMenu-effect-selector}--scale-and-rotate-pusher {
 
-.st-effect-11.st-container {
-    perspective: 1500px;
+    #{$OffCanvasMenu-container}{
+        perspective: 1500px;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc},
+    #{$OffCanvasMenu-class--style} {
+        transition: transform 0.5s, visibility 0.5s;
+
+    }
+
+    #{$OffCanvasMenu-container-inner}{
+        transform-style: preserve-3d;
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
 
-.st-effect-11 .st-pusher {
-    transform-style: preserve-3d;
-}
+#{$OffCanvasMenu-effect-selector}--scale-and-rotate-pusher.js-offCanvasMenu--active {
 
-.st-effect-11.st-menu-open .st-pusher {
-    transform: translate3d(100px, 0, -600px) rotateY(-20deg);
-}
+    /*
+     * Make a canvas that goes back and forth
+     * To hold scroll - add scroll position to top of inner and vice versa
+     */
 
-.st-effect-11.st-menu {
-    opacity: 1;
-    transform: translate3d(-100%, 0, 0);
-}
+    #{$OffCanvasMenu-container}{
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+    }
 
-.st-effect-11.st-menu-open .st-effect-11.st-menu {
-    visibility: visible;
-    transition: transform 0.5s;
-    transform: translate3d(0, 0, 0);
-}
+    #{$OffCanvasMenu-container-inner}{
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        left: 0px;
+        top: 0px;
+    }
 
-.st-effect-11.st-menu::after {
-    display: none;
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc} {
+        transform: translate3d(100px, 0, ($OffCanvasMenu-width * -2)) rotateY(-20deg);
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
 }

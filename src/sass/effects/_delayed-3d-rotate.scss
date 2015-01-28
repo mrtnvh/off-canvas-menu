@@ -2,29 +2,50 @@
     Effect: Delayed 3D rotate
 ======================================================= */
 
-.st-effect-14.st-container {
-    perspective: 1500px;
-    perspective-origin: 0% 50%;
+#{$OffCanvasMenu-effect-selector}--delayed-\33 d-rotate {
+
+    #{$OffCanvasMenu-body}{
+        perspective: 1500px;
+        perspective-origin: 0% 50%;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc},
+    #{$OffCanvasMenu-class--style} {
+        transition: transform 0.5s, visibility 0.5s;
+
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc}{
+        transition-delay: 0.1s;
+    }
+
+    #{$OffCanvasMenu-container-inner}{
+        transform-style: preserve-3d;
+        z-index: 2;
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        z-index: 1;
+        transform: translate3d(-50%, 0, 0) rotateY(90deg);
+        transform-origin: 0% 50%;
+        transform-style: preserve-3d;
+        transition-delay: 0.1s;
+        transition-timing-function: ease-in-out;
+    }
 }
 
-.st-effect-14 .st-pusher {
-    transform-style: preserve-3d;
-}
+#{$OffCanvasMenu-effect-selector}--delayed-\33 d-rotate.js-offCanvasMenu--active {
 
-.st-effect-14.st-menu-open .st-pusher {
-    transform: translate3d(300px, 0, 0);
-}
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc} {
+        transform: translate3d($OffCanvasMenu-width, 0, 0);
+    }
 
-.st-effect-14.st-menu {
-    transform: translate3d(-100%, 0, 0) rotateY(90deg);
-    transform-origin: 0% 50%;
-    transform-style: preserve-3d;
-}
-
-.st-effect-14.st-menu-open .st-effect-14.st-menu {
-    visibility: visible;
-    transition-delay: 0.1s;
-    transition-timing-function: ease-in-out;
-    transition-property: transform;
-    transform: translate3d(-100%, 0, 0) rotateY(0deg);
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+        transform: translate3d(0, 0, 0) rotateY(0deg);
+        transition-delay: none;
+    }
 }

@@ -2,25 +2,40 @@
     Effect: Fall down
 ======================================================= */
 
-.st-effect-13.st-container {
-    perspective: 1500px;
-    perspective-origin: 0% 50%;
+#{$OffCanvasMenu-effect-selector}--fall-down {
+
+    #{$OffCanvasMenu-body}{
+        perspective: 1500px;
+        perspective-origin: 0% 50%;
+    }
+
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc},
+    #{$OffCanvasMenu-class--style} {
+        transition: transform 0.5s, visibility 0.5s;
+        transition-timing-function: ease-in-out;
+        transition-property: transform;
+    }
+
+    #{$OffCanvasMenu-container-inner}{
+        z-index: 2;
+    }
+
+    #{$OffCanvasMenu-class--style} {
+        z-index: 1;
+        transform: translate3d(0, -100%, 0);
+    }
 }
 
-.st-effect-13.st-menu-open .st-pusher {
-    transform: translate3d(300px, 0, 0);
-}
+#{$OffCanvasMenu-effect-selector}--fall-down.js-offCanvasMenu--active {
 
-.st-effect-13.st-menu {
-    z-index: 1;
-    opacity: 1;
-    transform: translate3d(0, -100%, 0);
-}
+    #{$OffCanvasMenu-container-inner},
+    #{$OffCanvasMenu-elementsToPush-misc} {
+        transform: translate3d($OffCanvasMenu-width, 0, 0);
+    }
 
-.st-effect-13.st-menu-open .st-effect-13.st-menu {
-    visibility: visible;
-    transition-timing-function: ease-in-out;
-    transition-property: transform;
-    transform: translate3d(0, 0, 0);
-    transition-speed: 0.2s;
+    #{$OffCanvasMenu-class--style} {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+    }
 }
