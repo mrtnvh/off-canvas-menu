@@ -1,6 +1,10 @@
 /* =======================================================
     Effect: Reveal
 ======================================================= */
+/*
+ * There's a bug with scrolling the offcanvasmenu, look in to it!
+ */
+
 
 #{$OffCanvasMenu-effect-selector}--reveal {
 
@@ -35,4 +39,6 @@
         visibility: visible;
     }
 }
+
+
 
