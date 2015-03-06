@@ -6,7 +6,6 @@
         "jquery-legacy": "jquery#1.11.1"
     },
     "ignore": [
-        ".*",
         "examples",
         "bower_components",
         "node_modules"
