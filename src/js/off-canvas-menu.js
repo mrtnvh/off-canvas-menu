@@ -62,12 +62,12 @@
                     if (settings.container.hasClass(htmlClasses.containerActive)) {
                         //elem.removeClass(htmlClasses.activeCssClass);
                         elements.container.removeClass(htmlClasses.containerActive);
-                        buttonSettings.icon.removeClass(settings.iconClose).addClass(settings.iconOpen);
-                        elements.buttonText.textfi(settings.textOpen);
+                        elements.buttonIcon.removeClass(settings.iconClose).addClass(settings.iconOpen);
+                        elements.buttonText.text(settings.textOpen);
                     } else {
                         //elem.addClass(htmlClasses.activeCssClass);
                         elements.container.addClass(htmlClasses.containerActive);
-                        buttonSettings.icon.removeClass(settings.iconOpen).addClass(settings.iconClose);
+                        elements.buttonIcon.removeClass(settings.iconOpen).addClass(settings.iconClose);
                         elements.buttonText.text(settings.textClose);
                     }
                 };
