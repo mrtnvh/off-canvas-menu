@@ -31,12 +31,16 @@
         cssClasses = {
             containerActive: "." + htmlClasses.containerActiveAffix,
             button: "." + htmlClasses.button,
+            buttonText: "." + htmlClasses.button + "-text",
+            buttonIcon: "." + htmlClasses.button + "-icon",
             overlay: "." + htmlClasses.overlay,
             effect: "." + htmlClasses.effect
         },
 
         elements = {
             button: $(cssClasses.button),
+            buttonText: $(cssClasses.buttonText),
+            buttonIcon: $(cssClasses.buttonIcon),
             container: settings.container,
             overlay: $(cssClasses.overlay)
         },
@@ -44,10 +48,6 @@
         toggle = function(elem, effect) {
 
             var time,
-                buttonSettings = {
-                        icon : elements.button.find(".Icon"),
-                        message : elements.button.find(".js-offCanvasMenu-button-text")
-                    },
                 checkIdenticalEffects = function(){
                         var elementEffect = elem.data("effect"),
                             containerEffect = elements.container.data("effect");
@@ -63,12 +63,12 @@
                         //elem.removeClass(htmlClasses.activeCssClass);
                         elements.container.removeClass(htmlClasses.containerActive);
                         buttonSettings.icon.removeClass(settings.iconClose).addClass(settings.iconOpen);
-                        buttonSettings.message.text("Menu");
+                        elements.buttonText.textfi(settings.textOpen);
                     } else {
                         //elem.addClass(htmlClasses.activeCssClass);
                         elements.container.addClass(htmlClasses.containerActive);
                         buttonSettings.icon.removeClass(settings.iconOpen).addClass(settings.iconClose);
-                        buttonSettings.message.text("Sluit");
+                        elements.buttonText.text(settings.textClose);
                     }
                 };
 
